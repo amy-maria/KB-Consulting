@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../plugins/todo-list/src/editor.scss"],"names":[],"mappings":"AAMA,iCACC,qBAAA","file":"editor.min.css","sourcesContent":["/**\n * The following styles get applied inside the editor only.\n *\n * Replace them with your own styles or remove the file completely.\n */\n\n.wp-block-create-block-todo-list {\n\tborder: 1px dotted #f00;\n}\n"]}
