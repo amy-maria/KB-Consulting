@@ -5,16 +5,18 @@
 
 
   while(have_posts()) {
-    the_post(); ?>
+    the_post(); 
+    ?>
     <div class="m-3">
     <h2><?php the_title(); ?></h2>
     <?php
-      $theParent = wp_get_post_parent_id(get_the_ID());
-      if ($theParent) { ?>
+      $parent_id = wp_get_post_parent_id(get_the_ID());
+      if ($parent_id) : 
+      ?>
         <div>
-      <p><a href="<?php echo get_permalink($theParent); ?>"><i class="fa-solid fa-house" aria-hidden="true"></i> Back to Blog<?php echo site_url('/blog'); ?></a> <span>Posted by <?php the_author_posts_link(); ?> on <?php the_time('F j, Y'); ?> in <?php echo get_the_category_list(', '); ?></span></p>
+      <p><a href="<?php echo get_permalink($parent_id); ?>"><i class="fa-solid fa-house" aria-hidden="true"></i> Back to Blog</a> <span>Posted by <?php the_author_posts_link(); ?> on <?php the_time('F j, Y'); ?> in <?php echo get_the_category_list(', '); ?></span></p>
     </div>
-      <?php }
+      <?php  endif; 
     ?>
     
     <?php the_content(); ?>
