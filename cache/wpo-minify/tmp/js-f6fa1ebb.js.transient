@@ -1,0 +1,1 @@
+{"request":{"hurl":"http:\/\/localhost:10009\/wp-content\/plugins\/wp-google-maps\/wpgmza_data.js","inline":"","enable_minification":true,"type":"js","handle":"wpgmza_data","version":false},"log":{"url":"\/wp-content\/plugins\/wp-google-maps\/wpgmza_data.js","success":true},"code":"(function(){}());function __wpgmzaMapEngineLoadedCallback(){};\n","status":true}

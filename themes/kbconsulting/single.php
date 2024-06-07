@@ -1,4 +1,4 @@
-<!-- single post page -->
+
 <?php
   
   get_header();

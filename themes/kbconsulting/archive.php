@@ -1,5 +1,4 @@
-<!-- archive index of blog posts
--->
+
 <?php 
 get_header(); 
 ?>

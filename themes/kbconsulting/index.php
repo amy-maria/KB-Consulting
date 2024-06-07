@@ -1,4 +1,4 @@
-<!-- blog posts, fallback -->
+
 <?php 
 get_header(); 
 

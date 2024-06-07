@@ -34,14 +34,11 @@
 </nav>
   
 <div class="bg-teal-700 border border-black page-banner">
-<img src="<?php echo esc_url( get_theme_file_uri( 'assets/images/pexels-thecoachspace-2977565-1500X350.jpg' ) ); ?>" alt="coaching picture"> 
+<img src="<?php echo esc_url( get_theme_file_uri( './assets/images/pexels-thecoachspace-2977565-1500x350.jpg')); ?>" alt="coaching picture"> 
 
   <div class="position: absolute  text-center ">
   <h1>KB Consulting</h1>
   <h2>Contact us for all of your business needs</h2>
   </div>
 </div>
-
-
-
   </header>

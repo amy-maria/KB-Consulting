@@ -1,4 +1,4 @@
-<!-- archived events -->
+
 <?php 
 get_header(); 
 ?>
@@ -12,7 +12,7 @@ get_header();
 <?php 
 while (have_posts()) {
     the_post(); ?>
-    <div class="font-bold no-underline">
+    <div class="font-bold ">
         <h2 class='no-underline'><a  href="<?php the_permalink(); ?>"  ><?php the_title(); ?></a></h2>
     </div>
     <div class="m-2 font-lg'">

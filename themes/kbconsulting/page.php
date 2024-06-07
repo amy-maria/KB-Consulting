@@ -1,43 +1,42 @@
-<!-- static single post page -->
-<?php get_header() ?>
 
-<?php
+<?php 
+get_header(); 
 
-  while(have_posts()) :
-    the_post(); ?>
-   
-    <div class="page-banner__content container container--narrow">
-      <h1 class="font-bold"><?php the_title(); ?></h1>
-  </div>
 
-  <div class="container container--narrow page-section">
-    <?php 
-    $parent_id = wp_get_post_parent_id(get_the_ID());
-    if ($parent_id) :
+  while(have_posts()) {
+    the_post(); 
+      $theParent = wp_get_post_parent_id(get_the_ID());
+    $testArray = get_pages(array(
+      'child_of' => get_the_ID()));
       ?>
+
+   <?php if ($theParent || $testArray) { ?>
     <div class="page-links">
-      <h2 class="page-links__title">
-      <a href="<?php echo ecs_url(get_permalink($parent_id)); ?>"><?php echo esc_html(get_the_title($parent_id)); ?></a></h2>
+      <h2 class="m-3 page-links__title"><a href="<?php  the_permalink($theParent); ?>"><?php echo get_the_title($theParent); ?></a></h2>
       <ul class="min-list">
         <?php
-         
+          if ($theParent) {
+            $findChildrenOf = $theParent;
+          } else {
+            $findChildrenOf = get_the_ID();
+          }
+
           wp_list_pages(array(
             'title_li' => NULL,
-            'child_of' => $parent_id,
+            'child_of' => $findChildrenOf,
             'sort_column' => 'menu_order'
           ));
         ?>
       </ul>
     </div>
-    <?php endif; ?>
+    <?php } ?>
     
 
-    <div class="generic-content">
+    <div class="m-3 generic-content">
       <?php the_content(); ?>
     </div>
-  </div>
-    
-  <?php endwhile; ?> 
 
-  <?php get_footer(); ?>
+  <?php }?>
+
+ <?php get_footer(); ?>
 
